@@ -31,3 +31,5 @@ while (b<=num) {
 }
 console.log (a);
 
+
+// 3

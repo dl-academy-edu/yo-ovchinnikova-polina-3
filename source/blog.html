@@ -84,20 +84,77 @@
               <fieldset class="filter__block">
                 <legend class="filter__name">Views</legend>
                 <ul class="filter__radio">
-                    <li class="filter__radio-item">
-                        <input class="filter__radio-input" checked type="radio" name="age" id="input-age">
-                        <label class="filter__radio-label" for="input-age">100-500</label>
+                    <li class="filter__radio-list">
+                        <input class="filter__radio-input" type="radio" name="views" id="input-views">
+                        <label class="filter__radio-label" for="input-views">100-500</label>
                     </li>
-                    <li class="filter__radio-item">
-                        <input class="filter__radio-input" type="radio" name="age" id="input-age1">
-                        <label class="filter__radio-label" for="input-age1">500-1000</label>
+                    <li class="filter__radio-list">
+                        <input class="filter__radio-input" type="radio" name="views" id="input-views">
+                        <label class="filter__radio-label radio" for="input-views">500-1000</label>
                     </li>
-                    <li class="filter__radio-item">
-                        <input class="filter__radio-input" type="radio" name="age" id="input-age2">
-                        <label class="filter__radio-label" for="input-age2">1000-2000</label>
+                    <li class="filter__radio-list">
+                        <input class="filter__radio-input" type="radio" name="views" id="input-views">
+                        <label class="filter__radio-label radio" for="input-views">1000-2000</label>
                     </li>
                 </ul>
             </fieldset>
+            <fieldset class="filter__block">
+              <legend class="filter__name">Comments</legend>
+              <ul class="filter__comments">
+                <li class="filter__comments-item">
+                  <input class="filter__comments-check" type="checkbox" name="" id="amount">
+                  <label class="filter__comments-label" for="amount">0</label>
+                </li>
+                <li class="filter__comments-item">
+                  <input class="filter__comments-check" type="checkbox" name="" id="amount">
+                  <label class="filter__comments-label" for="amount">0-1</label>
+                </li>
+                <li class="filter__comments-item">
+                  <input class="filter__comments-check" type="checkbox" name="" id="amount">
+                  <label class="filter__comments-label" for="amount">1-50</label>
+                </li>
+               </ul>
+            </fieldset>
+            <fieldset class="filter__block">
+              <legend class="filter__name">How show?</legend>
+              <ul class="filter__radio">
+                  <li class="filter__radio-list">
+                      <input class="filter__radio-input" type="radio" name="views" id="input-show">
+                      <label class="filter__radio-label" for="input-show">show 5</label>
+                  </li>
+                  <li class="filter__radio-list">
+                      <input class="filter__radio-input" type="radio" name="views" id="input-show">
+                      <label class="filter__radio-label radio" for="input-show">show 10</label>
+                  </li>
+                </ul>
+            </fieldset>
+            <fieldset class="filter__block">
+              <legend class="filter__name">Sort by</legend>
+              <ul class="filter__radio">
+                  <li class="filter__radio-list">
+                      <input class="filter__radio-input" type="radio" name="views" id="input-sort">
+                      <label class="filter__radio-label" for="input-sort">date</label>
+                  </li>
+                  <li class="filter__radio-list">
+                      <input class="filter__radio-input" type="radio" name="views" id="input-sort">
+                      <label class="filter__radio-label radio" for="input-sort">title</label>
+                  </li>
+                  <li class="filter__radio-list">
+                    <input class="filter__radio-input" type="radio" name="views" id="input-sort">
+                    <label class="filter__radio-label" for="input-sort">views</label>
+                </li>
+                </ul>
+            </fieldset>
+              <div>
+                <p class="filter__span">reset form</p>
+                <button class="filter__btn">Reset</button>
+              </div>
+            </div>
+            <div class="search__block">
+              <form class="search__form" action="#">
+                <input class="search__input" type="search" name="email" id="#" value="">
+                <button class="search__btn" type="submit">Search</button>
+            </form>
             </div>
         </section>
     </main>
