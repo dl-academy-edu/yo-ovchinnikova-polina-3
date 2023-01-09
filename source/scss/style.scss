@@ -1,0 +1,577 @@
+@import "_variables.base";
+@import "_mixins";
+
+/*
+  Import vendor libraries
+*/
+@import "vendor/_normalize";
+
+/*
+  Import utils classes and base styles
+*/
+@import "_utils";
+@import "_base";
+
+/*
+  Import all other blocks
+*/
+@import "_blocks/container";
+@import "_blocks/footer";
+@import "_blocks/header";
+
+/*
+  Ниже пример подключения других блоков
+
+  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
+  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
+
+  Для именования селекторов давайте придерживаться стиля two dashes
+  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
+  block-name__element-name--modificator
+*/
+
+/*
+  Код ниже нужно удалить, он добавлен просто для примера
+  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
+  то он должен был бы быть в файле _blocks/coming-soon.scss
+*/
+
+// .coming-soon {
+//   color: $color-text;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   justify-content: center;
+//   text-align: center;
+//   min-height: calc(100vh - 100px);
+//   margin: auto;
+//   padding: 0 5vw;
+
+//   &__title {
+//     display: flex;
+//     align-items: center;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     font-size: 25vw;
+//     font-weight: 400;
+//     margin: 0 auto;
+//     text-transform: uppercase;
+//     width: 100%;
+//   }
+// }
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(.//../fonts/Gilroy-ExtraBold.otf);
+  src: url(.//../fonts/Gilroy-Light.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+.header {
+  // margin-bottom: 12px;
+  border-bottom: 1px solid #666666;
+}
+
+.header__nav-list {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.header__nav-home {
+  margin-right: 669px;
+}
+.header__nav-link {
+  text-decoration: none;  
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.block__info {
+  display: flex;
+}
+.block__info-name{
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 47px;
+  line-height: 57px;
+  width: 280px;
+}
+.block__info-bio {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  width: 226px;
+  margin-top: 97px;
+  padding-left: 40px;
+}
+
+.slider {
+  position: relative;
+}
+.slider__photo {
+  // position: absolute;
+  width: 1000px;
+  height: 465px;
+  margin-bottom: 30px;
+}
+
+
+
+.about {
+  background: #F6F6F6;
+  position: relative;
+}
+
+.about__box-title {
+  margin-left: 642px;
+  padding-top: 60px;
+  padding-bottom: 51px;
+}
+
+.about__review-item {
+  text-decoration: none;
+  list-style-type: none;
+  width: 448px;
+  margin-left: 446px;
+  padding-bottom: 70px;
+}
+
+.about__review-svg {
+  // border: 2.5px solid #070707;
+  // margin-left: 442px;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+
+.skills__title {
+  margin-left: 670px;
+}
+
+.skills__description {
+  margin-left: 610px;
+  padding-bottom: 15px;
+}
+
+
+// .skills__focus {
+//   margin-right: 270px;
+// }
+
+.skills__focus-list {
+  display: flex;
+  margin-left: 80px;
+  margin-bottom: 124px;
+  
+}
+
+.skills__focus-item {
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 126px;
+  // margin-right: 270px;
+}
+
+
+.portfolio {
+  background: #F6F6F6;
+  position: relative;
+}
+
+.portfolio__title {
+  margin-left: 650px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.footer__block-title {
+  margin-left: 648px;
+  margin-top: 60px;
+}
+
+.footer__block-para {
+  margin-left: 580px;
+  width: 269px;
+  text-align: center;
+}
+
+.footer__btn {
+  background: #070707;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 29px;
+  // gap: 10px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-left: 620px;
+  margin-bottom: 50px;
+}
+
+
+.footer__networks-list {
+  display: flex;
+  margin-left: 300px;
+}
+
+.footer__networks-item {
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.footer__networks-btn {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 29px;
+  // background: #E5E5E5;
+  background: none;
+}
+
+.footer__paragraph {
+  // font-family: 'Gilroy';
+  // @font-face {
+  //   font-family: "Gilroy";
+  //   src: url();
+  // }
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin-left: 90px;
+  color: #828282;
+}
+
+
+
+
+// blog
+
+.filter {
+  display: flex;
+  // width: 75px;
+}
+
+.filter__block {
+  // display: flex;
+  border: none;
+}
+
+.filter__list {
+  display: flex;
+  // width: 15px;
+  // padding: 0;
+}
+
+.filter__list-item {
+  list-style-type: none;
+  text-decoration: none;
+  // padding-left: 5px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // width: 75px;
+}
+
+.filter__list-check {
+  display: none;
+}
+
+.label {
+  padding-left: 25px;
+}
+
+.filter__list-label::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #2176FF;
+  border-radius: 5px;
+}
+
+.filter__list-check:checked + .filter__list-label::before {
+  content: ""; 
+  width: 21px; 
+  height: 21px; 
+  border: 2.5px solid #2176FF;
+  border-radius: 0.7px;
+}
+
+.filter__list-label1::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #33A1FD;
+  border-radius: 5px;
+}
+
+.filter__list-label2::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #FDCA40;
+  border-radius: 5px;
+}
+
+.filter__list-label3::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #57E2E5;
+  border-radius: 5px;
+  
+}
+
+.filter__list-label4::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #F79824;
+  border-radius: 5px;
+}
+
+.filter__list-label5::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #E08DAC;
+  border-radius: 5px;
+}
+
+.filter__list-label6::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #6A7FDB;
+  border-radius: 5px;
+}
+
+.filter__list-label7::before {
+  content: "";
+  cursor: pointer; 
+  width: 21px; 
+  height: 21px; 
+  margin-left: -25px; 
+  position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #45CB85;
+  border-radius: 5px;
+}
+
+
+.filter__radio {
+  padding-right: 20px;
+}
+
+.filter__radio-item {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.filter__radio-list {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.filter__radio-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  // display: none;
+  // padding-bottom: 10px;
+}
+
+.filter__radio-label {
+  // margin-left: 10px;
+  text-align: center;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #070707;
+  padding-bottom: 10px;
+}
+
+.filter__radio-label::before {
+  content: "";
+  cursor: pointer; 
+  width: 25px;
+  height: 25px;
+  margin-left: -25px;
+  // position: absolute;
+  background-position: center; 
+  // background-repeat: no-repeat;
+  border: 2.5px solid #070707;
+  border-radius: 30px;
+  padding-right: 20px;
+  display: inline-block;
+    // width: 20px;
+    // height: 20px;
+    // vertical-align: sub;
+}
+// .filter__radio-input {
+//   background-image: url(../img/svg/circle.svg);
+//   width: 13px; 
+//   height: 13px;
+// }
+
+.filter__radio-input:checked + .filter__radio::before {
+  content: ""; 
+  width: 13px; 
+  height: 13px; 
+  background-image: url(../img/svg/circle.svg);
+}
+
+
+.radio {
+  padding-bottom: 10px;
+}
+
+.filter__comments-item {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.filter__comments-check {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.filter__comments-label {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.filter__comments-label::before {
+  content: "";
+  cursor: pointer; 
+  width: 25px; 
+  height: 25px; 
+  margin-left: -25px; 
+  display: inline-block;
+  // padding-bottom: 15px;
+  // position: absolute; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: 2.5px solid #E5E5E5;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.filter__comments-check:checked + .filter__comments-label::before {
+background-image: url(../img/svg/Vector.svg);
+width: 11px;
+height: 12px;
+}
+
+.filter__span {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #E5E5E5;
+  // margin-bottom: 20px;
+}
+
+.filter__btn {
+  border: 2.5px solid #070707;
+  border-radius: 30px;
+  width: 84px;
+  height: 42px;
+  background: none;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #070707;
+}
+
+.search__input {
+  border: 2.5px solid #E5E5E5;
+  width: 873px;
+  height: 50px;
+}
+
+.search__btn {
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 19px;
+  gap: 10px;
+  width: 97px;
+  height: 42px;
+  color: #070707;
+  border: 2.5px solid #070707;
+  border-radius: 30px;
+  background: none;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+  // margin-right: 5px;
+}
+
+.search__block {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 20px;
+}
